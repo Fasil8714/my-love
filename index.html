@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To My Forever | A Little Anniversary Love Letter</title>
+  <meta name="description" content="A little love letter to my forever. Happy anniversary to the one who makes every day beautiful.">
+  <meta property="og:title" content="To My Forever | Happy Anniversary">
+  <meta property="og:description" content="A love written in little moments, held together by all the tomorrows still to come.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Cormorant Garamond & DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="anniversary-page">
+    <!-- Romantic background audio with fallback sources -->
+    <audio id="romanticAudio" autoplay loop preload="auto" aria-label="Romantic background music">
+      <source src="assets/Music/music.mp3" type="audio/mpeg">
+      <source src="assets/Music/WhatsApp Audio 2026-10-22 at 8.53.41 PM.mpeg" type="audio/mpeg">
+    </audio>
+
+    <a class="skip-link" href="#our-story">Skip to our story</a>
+
+    <!-- Floating Music Toggle Button -->
+    <button class="music-button" id="musicToggleBtn" type="button" aria-label="Pause romantic music" aria-pressed="true" title="Pause music">
+      <svg class="music-icon icon-pause" id="musicPauseIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="14" y="3" width="5" height="18" rx="1"></rect>
+        <rect x="5" y="3" width="5" height="18" rx="1"></rect>
+      </svg>
+      <svg class="music-icon icon-play hidden" id="musicPlayIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="8" cy="18" r="4"></circle>
+        <path d="M12 18V2l7 4"></path>
+      </svg>
+      <span class="music-label" id="musicLabel">Pause the music</span>
+      <span class="music-equalizer music-equalizer--playing" id="musicEqualizer" aria-hidden="true">
+        <i></i><i></i><i></i><i></i>
+      </span>
+    </button>
+
+    <!-- SECTION 1: HERO / OPENING -->
+    <section class="opening" aria-labelledby="opening-heading">
+      <div class="opening-photo" style="background-image: url('assets/images/anniversary-hero-.jpg');" aria-hidden="true"></div>
+      <div class="opening-grain" aria-hidden="true"></div>
+      
+      <div class="orbit orbit--one" aria-hidden="true">
+        <span>FOREVER YOURS · ALWAYS YOURS ·</span>
+      </div>
+      <div class="orbit orbit--two" aria-hidden="true">
+        <span>STILL CHOOSING YOU · ALWAYS ·</span>
+      </div>
+
+      <div class="opening-heart opening-heart--one" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+        </svg>
+      </div>
+      <div class="opening-heart opening-heart--two" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+        </svg>
+      </div>
+      <div class="opening-heart opening-heart--three" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+        </svg>
+      </div>
+
+      <div class="opening-shimmer" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path>
+          <path d="M20 2v4"></path>
+          <path d="M22 4h-4"></path>
+          <circle cx="4" cy="20" r="2"></circle>
+        </svg>
+        <span>EVERY LOVE STORY IS LOVELY — OURS IS MY FAVORITE</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path>
+          <path d="M20 2v4"></path>
+          <path d="M22 4h-4"></path>
+          <circle cx="4" cy="20" r="2"></circle>
+        </svg>
+      </div>
+
+      <div class="opening-content">
+        <p class="opening-eyebrow">
+          <span></span> A LETTER FOR MY HUSBAND <span></span>
+        </p>
+        <h1 id="opening-heading">
+          Still falling<br>
+          for <span>you.</span>
+        </h1>
+        <div class="opening-divider">
+          <span></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+          </svg>
+          <span></span>
+        </div>
+        <p class="opening-message">
+          Every love story is beautiful.<br>
+          Ours will always be my favourite.
+        </p>
+        <a class="opening-cta" href="#our-story">
+          <span>COME WITH ME</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14"></path>
+            <path d="m19 12-7 7-7-7"></path>
+          </svg>
+        </a>
+      </div>
+
+      <div class="opening-date">
+        <span>MY FAVORITE DAY</span>
+        <span>THE DAY I CHOSE YOU. EVERY DAY AFTER, TOO.</span>
+      </div>
+
+      <div class="opening-index" aria-hidden="true">
+        01 <span>—</span> FOREVER
+      </div>
+    </section>
+
+    <!-- SECTION 2: INTRO -->
+    <section class="intro-section" id="our-story" aria-labelledby="intro-heading">
+      <div class="section-flower section-flower--left" aria-hidden="true">✳</div>
+      <div class="section-flower section-flower--right" aria-hidden="true">✳</div>
+      <div class="intro-inner" data-reveal>
+        <p class="eyebrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+          </svg>
+          TO THE ONE WHO FEELS LIKE HOME
+        </p>
+        <h2 class="intro-heading" id="intro-heading">
+          To my <span>forever</span>,
+        </h2>
+        <p class="intro-copy">
+          Somehow, life keeps finding new ways to feel sweeter with you in it. I’d choose your hand to hold, your laugh to hear, and your heart to come home to—in every life, every time.
+        </p>
+        <p class="handwritten">
+          Happy anniversary, my love.
+        </p>
+        <div class="intro-ornament" aria-hidden="true">
+          <span></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+          </svg>
+          <span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: MEMORIES (6 PHOTO CARDS) -->
+    <section class="memories-section" aria-labelledby="memories-heading">
+      <div class="memories-heading" data-reveal>
+        <p class="eyebrow">
+          <span>✧</span> LITTLE THINGS. BIG LOVE. <span>✧</span>
+        </p>
+        <h2 id="memories-heading">
+          A million reasons,<br>
+          <span>and counting.</span>
+        </h2>
+        <p>Here are a few little pieces of my favorite everything.</p>
+      </div>
+
+      <div class="memories-grid">
+        <!-- Memory I -->
+        <article class="memory memory--1" data-reveal>
+          <div class="memory-frame memory-frame--portrait">
+            <img src="assets/images/img1.jpeg" alt="A couple holding hands and smiling at each other in a leafy garden." loading="lazy" width="1200" height="1200">
+            <div class="memory-frame-glow" aria-hidden="true"></div>
+            <span class="memory-index">I</span>
+          </div>
+          <div class="memory-caption">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+            </svg>
+            <h3>The way you look at me</h3>
+            <p>Even in a room full of people, somehow, I still find home in your eyes.</p>
+          </div>
+        </article>
+
+        <!-- Memory II -->
+        <article class="memory memory--2" data-reveal>
+          <div class="memory-frame memory-frame--detail">
+            <img src="assets/images/img2.jpeg" alt="A close selfie of a couple smiling together outdoors." loading="lazy" width="1200" height="1200">
+            <div class="memory-frame-glow" aria-hidden="true"></div>
+            <span class="memory-index">II</span>
+          </div>
+          <div class="memory-caption">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+            </svg>
+            <h3>All the little things</h3>
+            <p>Your hand reaching for mine. Your laugh from another room. My favourite ordinary moments.</p>
+          </div>
+        </article>
+
+        <!-- Memory III -->
+        <article class="memory memory--3" data-reveal>
+          <div class="memory-frame memory-frame--wide">
+            <img src="assets/images/img3.jpeg" alt="A newly married couple standing together in a garden." loading="lazy" width="1808" height="1200">
+            <div class="memory-frame-glow" aria-hidden="true"></div>
+            <span class="memory-index">III</span>
+          </div>
+          <div class="memory-caption">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+            </svg>
+            <h3>Everywhere feels like us</h3>
+            <p>Give me a thousand sunsets, as long as every single one is next to you.</p>
+          </div>
+        </article>
+
+        <!-- Memory IV -->
+        <article class="memory memory--4" data-reveal>
+          <div class="memory-frame memory-frame--portrait">
+            <img src="assets/images/img4.jpeg" alt="A couple walking hand in hand outdoors." loading="lazy" width="1200" height="1200">
+            <div class="memory-frame-glow" aria-hidden="true"></div>
+            <span class="memory-index">IV</span>
+          </div>
+          <div class="memory-caption">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+            </svg>
+            <h3>Right here, beside you</h3>
+            <p>Hand in hand, heart to heart—my favourite place will always be by your side.</p>
+          </div>
+        </article>
+
+        <!-- Memory V -->
+        <article class="memory memory--5" data-reveal>
+          <div class="memory-frame memory-frame--portrait">
+            <img src="assets/images/img5.png" alt="A tender moment shared between a couple in a garden." loading="lazy" width="1200" height="1200">
+            <div class="memory-frame-glow" aria-hidden="true"></div>
+            <span class="memory-index">V</span>
+          </div>
+          <div class="memory-caption">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+            </svg>
+            <h3>The sweetest kind of love</h3>
+            <p>A thousand little moments, and somehow every one still gives me butterflies.</p>
+          </div>
+        </article>
+
+        <!-- Memory VI -->
+        <article class="memory memory--6" data-reveal>
+          <div class="memory-frame memory-frame--wide">
+            <img src="assets/images/img6.jpeg" alt="A bride and groom dressed for their wedding, standing close together outdoors." loading="lazy" width="1808" height="1200">
+            <div class="memory-frame-glow" aria-hidden="true"></div>
+            <span class="memory-index">VI</span>
+          </div>
+          <div class="memory-caption">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+            </svg>
+            <h3>My favourite promise</h3>
+            <p>From our first forever to every tomorrow—we keep making the most beautiful memories.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 4: LOVE LETTER -->
+    <section class="letter-section" aria-labelledby="letter-heading">
+      <div class="letter-photo" style="background-image: url('assets/images/img4.jpeg');" aria-hidden="true"></div>
+      <div class="letter-wash" aria-hidden="true"></div>
+      <div class="letter-content" data-reveal>
+        <span class="letter-stamp">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+          </svg>
+        </span>
+        <p class="eyebrow">SEALED WITH ALL MY LOVE</p>
+        <h2 id="letter-heading">
+          I wrote you<br>
+          a little<br>
+          <span>something.</span>
+        </h2>
+        <p class="letter-teaser">
+          Not everything the heart feels fits in one page. But this little one is all for you.
+        </p>
+
+        <button type="button" class="letter-button" id="letterOpenBtn" aria-expanded="false" aria-controls="forever">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+          </svg>
+          <span class="letter-btn-text" id="letterBtnText">OPEN YOUR LOVE LETTER</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 7h10v10"></path>
+            <path d="M7 17 17 7"></path>
+          </svg>
+        </button>
+
+        <!-- Unsealed Letter Content -->
+        <article class="love-letter" id="forever" hidden>
+          <p class="love-letter-salutation">My darling,</p>
+          <p>You are still my favorite part of every day, the person I look for in every room, and the hand I want to hold through every season.</p>
+          <p>Thank you for every ordinary day you’ve made extraordinary just by being you. Whatever comes next, let it come. I’ll be right there beside you—still laughing at your jokes, still finding my way home in your arms, still falling for you.</p>
+          <p class="love-letter-signoff">
+            All my love, for all our tomorrows.<br>
+            <span>Yours, always ♥</span>
+          </p>
+        </article>
+      </div>
+
+      <span class="letter-side-note" aria-hidden="true">
+        YOURS. ALWAYS. &nbsp; ♥ &nbsp; YOURS. ALWAYS.
+      </span>
+    </section>
+
+    <!-- SECTION 5: FINALE / FOOTER -->
+    <footer class="finale" aria-labelledby="finale-heading">
+      <div class="finale-glow" aria-hidden="true"></div>
+      <div class="finale-content" data-reveal>
+        <div class="finale-heart" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+          </svg>
+        </div>
+        <p class="eyebrow">TODAY. TOMORROW. ALL THE LITTLE MOMENTS AFTER.</p>
+        <h2 id="finale-heading">
+          In every lifetime,<br>
+          <span>it’s still you.</span>
+        </h2>
+        <div class="finale-divider" aria-hidden="true">
+          <span></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path>
+            <path d="M20 2v4"></path>
+            <path d="M22 4h-4"></path>
+            <circle cx="4" cy="20" r="2"></circle>
+          </svg>
+          <span></span>
+        </div>
+        <p>
+          Happy anniversary to the love of my life.<br>
+          I love you—always, always, always.
+        </p>
+        <a href="#opening-heading" class="finale-back-to-top" aria-label="Back to the beginning">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(180deg);" aria-hidden="true">
+            <path d="M12 5v14"></path>
+            <path d="m19 12-7 7-7-7"></path>
+          </svg>
+          <span>ONE MORE TIME</span>
+        </a>
+      </div>
+
+      <div class="finale-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+        </svg>
+        <span>MADE WITH ALL MY HEART, JUST FOR YOU</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+        </svg>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
