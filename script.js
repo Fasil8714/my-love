@@ -100,44 +100,64 @@
     }
   }
 
-  // Autoplay attempt
+  // Enhanced Autoplay & Immediate Gesture Unlock
   if (audio) {
-    let unmounted = false;
+    let hasUnlocked = false;
 
-    const playWithGesture = () => {
-      if (audio) {
+    const tryUnmutedPlay = async () => {
+      if (hasUnlocked && isPlaying && !isMutedState) return true;
+      try {
         audio.muted = false;
-        audio
-          .play()
-          .then(() => {
-            updateMusicUI(true);
-            isMutedState = false;
-          })
-          .catch(() => updateMusicUI(false));
+        await audio.play();
+        hasUnlocked = true;
+        isMutedState = false;
+        updateMusicUI(true);
+        removeUnlockEvents();
+        return true;
+      } catch (e) {
+        return false;
       }
     };
 
-    window.addEventListener('pointerdown', playWithGesture, { once: true });
+    const handleAnyUserInteraction = () => {
+      tryUnmutedPlay();
+    };
 
-    (async () => {
-      try {
-        await audio.play();
-        if (!unmounted) updateMusicUI(true);
-      } catch {
-        if (unmounted) return;
+    const unlockEvents = [
+      'pointerdown', 'touchstart', 'touchend', 'touchmove',
+      'mousemove', 'scroll', 'wheel', 'keydown', 'click', 'focus'
+    ];
+
+    const removeUnlockEvents = () => {
+      unlockEvents.forEach(evt => {
+        window.removeEventListener(evt, handleAnyUserInteraction, { passive: true, capture: true });
+        document.removeEventListener(evt, handleAnyUserInteraction, { capture: true });
+      });
+    };
+
+    unlockEvents.forEach(evt => {
+      window.addEventListener(evt, handleAnyUserInteraction, { once: true, passive: true, capture: true });
+      document.addEventListener(evt, handleAnyUserInteraction, { once: true, capture: true });
+    });
+
+    // 1. Try immediate unmuted play right away
+    tryUnmutedPlay().then(success => {
+      if (!success) {
+        // 2. If unmuted was blocked by browser policy, start muted first to preload and keep audio hot
         audio.muted = true;
-        try {
-          await audio.play();
-          if (!unmounted) {
-            isMutedState = true;
-            updateMusicUI(true, true);
-          }
-        } catch {
+        audio.play().then(() => {
+          isMutedState = true;
+          updateMusicUI(true, true);
+        }).catch(() => {
           audio.muted = false;
           updateMusicUI(false);
-        }
+        });
       }
-    })();
+    });
+
+    // 3. Retry on window load & DOMContentLoaded
+    window.addEventListener('load', tryUnmutedPlay, { once: true });
+    document.addEventListener('DOMContentLoaded', tryUnmutedPlay, { once: true });
   }
 
   // Toggle button click
