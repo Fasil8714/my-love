@@ -18,6 +18,42 @@
 </head>
 <body>
 
+  <!-- Floating Romantic Sparkles & Heart Particles Canvas -->
+  <canvas id="loveParticlesCanvas" class="love-particles-canvas" aria-hidden="true"></canvas>
+
+  <!-- Romantic Entry Gate / Envelope Overlay (Resolves browser autoplay restrictions with an intentional romantic gesture) -->
+  <div id="loveGate" class="love-gate" aria-modal="true" role="dialog" aria-label="Open Anniversary Love Letter">
+    <div class="love-gate__backdrop-glow" aria-hidden="true"></div>
+    <div class="love-gate__card">
+      <div class="love-gate__seal" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+      </div>
+      <p class="love-gate__eyebrow">A Special Love Letter</p>
+      <h2 class="love-gate__title">To My Forever</h2>
+      <p class="love-gate__subtitle">"Every love story is beautiful, but ours is my favorite."</p>
+      
+      <button id="gateOpenBtn" class="love-gate__btn" type="button" aria-label="Open Letter with Music">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+        <span>OPEN WITH MUSIC</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 18l6-6-6-6"/>
+        </svg>
+      </button>
+
+      <p class="love-gate__hint">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <circle cx="8" cy="18" r="4"></circle>
+          <path d="M12 18V2l7 4"></path>
+        </svg>
+        <span>Tap anywhere to open with music</span>
+      </p>
+    </div>
+  </div>
+
   <main class="anniversary-page">
     <!-- Romantic background audio with fallback sources -->
     <audio id="romanticAudio" autoplay loop preload="auto" playsinline webkit-playsinline aria-label="Romantic background music">
